@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<Style>
+    *{ /* define a borda onde ela ira ficar fixada no canto da tela sem espacos*/
+	margin: 0px;
+	padding: 0px;
+}
+body{ /* cor da tela inteira do fundo*/
+	background-color:brown;
+}
+#icone { 
+	cursor: pointer;
+	padding: 0px;
+	position: absolute;
+	z-index: 1;
+}
+
+#check{
+	display: none;
+	background-color: #f00;
+}
+
+.barra{ /* barra do menu */
+	background-color:burlywood; /* defino a cor da barra do menu */
+	height: 100%; /* defino a autura*/
+	width: 300px; /* largura da barra */
+	position: absolute;
+	left: -300px; /* aqui funciona para a barra desaparecer */
+	transition: all .1s linear; /* aqui dis para ele transitar todos em 2 segundos linear em linha para esquerda */
+}
+
+.barra .link{
+	list-style: none; /* aqui ele diz o estilo da lista e eu defino o estilo da lista*/
+	background-color: #02026e; /* aqui ele diz a cor das barras que compoe o nome as funcoes*/
+}
+
+nav{ /* navegacao */
+	width: 100%;
+	position: absolute;
+	top: 60px;
+}
+nav a{
+	text-decoration: none;
+}
+
+.link{
+	color: #f4f4f9;
+	font-family: 'Arial';
+	font-size: 12pt; /* tamanho da fonte*/
+	padding: 20px;
+	border-bottom: 2px solid #222;/* aqui eu diz a espessura das bordas entre as colunas de linhas de cada funcao*/
+	transition:  all .1s linear; /* aqui dis para ele transitar todos em 2 segundos linear quando volta normal para cima  */
+	opacity: 0;
+	margin-top: 200px;
+}
+.link:hover{ /* aqui ele diz a cor da linha onde o mouse passar para indicar aonde ele se encontra ou mapear */
+	background-color: #e71058;
+}
+
+#check:checked ~ .barra nav a .link{
+		opacity: 1;
+		margin-top: 0;
+		transition-delay: .1s;
+}
+#check:checked ~ .barra{
+		transform: translateX(300px);
+
+}
+</Style>
+
+</head>
+<body>
+    
+    <input type="checkbox" id="check">
+<label for="check" id="icone"><img src="https://i.imgur.com/RWHvwPE.png"/></label>
+<div class="barra">	
+	<nav>
+		<a href=""><div class="link">Home</div></a>
+		<a href=""><div class="link">Tutoriais</div></a>
+		<a href=""><div class="link">Downloads</div></a>
+		<a href=""><div class="link">Eventos</div></a>
+		<a href=""><div class="link">Contato</div></a>
+	</nav>	
+</div>
+</body>
+</html>

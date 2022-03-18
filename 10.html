@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style type="text/CSS">
+
+/* aqui eu defino a largura da cor do cabecalho dos links*/
+.menu
+{
+    width: 500px;
+}
+
+/* aqui eu defino a margem do cabecalho muito pra cima ou pouco para baicho*/
+.menu ul
+{
+     margin: 16px 0;
+     padding: 0;
+     /* aqui eu defino a com do cabe;alho que vai ser*/
+     background-color: blueviolet;
+     /* aqu define para ficar um do lado do outro de forma horinzontal*/
+     overflow: hidden;
+}
+
+.menu li
+{
+    /* aqui diz que ele ira da esquerda para a direita horizontal */
+    float: left;
+    /* diz que na tela ele ira seguir de forma em uma linha so */
+    display: inline;
+}
+
+
+/* aqui agora eu vou dar o estilo do link da lista */
+.menu li a
+{
+    display: block;
+    /* cor do nome do link*/
+    color: white;
+    /* aqui ele dira o tamanho das letras do menu*/
+    padding: 16px 16px;
+    /* aqui ele tira a marcassao da linha no link*/
+    text-decoration: none;
+}
+
+/* aqui eu vou dizer quando eu passar o mouse em cima do link ele vai mudar a cor*/
+.menu ul li a:hover
+{
+    background-color: black;
+}
+
+/* aqui ele e usado para referencia aonde eu estou logado no link com cor preta*/
+.menu li.active
+{
+    background-color: black;
+}
+
+</style>
+</head>
+<body>
+    <nav class="menu">
+        <ul>
+           <li class="active"><a href="#">HOME</a></li> 
+           <li><a href="#">HTML</a></li> 
+           <li><a href="#">CSS</a></li> 
+
+
+        </ul>
+    </nav>
+</body>
+</html>
