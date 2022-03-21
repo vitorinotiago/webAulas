@@ -7,31 +7,167 @@
     <title>Document</title>
 <style type="text/CSS">
 
+
+.cabeçalho
+{
+        margin: 10px 0;
+        width: 1470px;
+        padding:1px;
+        text-align: center;
+        background-color: goldenrod;
+}
+
+.cabeçalho a
+{
+    text-decoration: none;
+}
+
 /* aqui eu defino a largura da cor do cabecalho dos links*/
 .menu
 {
-    width: 500px;
+        width:100%;
+        height: 50px;
+        font-family:'Arial';
 }
 
 /* aqui eu defino a margem do cabecalho muito pra cima ou pouco para baicho*/
 .menu ul
 {
-     margin: 16px 0;
-     padding: 0;
-     /* aqui eu defino a com do cabe;alho que vai ser*/
-     background-color: blueviolet;
-     /* aqu define para ficar um do lado do outro de forma horinzontal*/
-     overflow: hidden;
+        list-style: none;
+        position: relative;
+}
+.menu ul li
+{
+        width: 150px;
+        /* margin: 150px; 
+        padding: 0;*/
+        /* aqui eu defino a com do cabe;alho que vai ser
+        background-color: ;*/
+        float: left;
+        /* aqu define para ficar um do lado do outro de forma horinzontal*/
+        /* overflow: hidden;*/
 }
 
 .menu li
 {
-    /* aqui diz que ele ira da esquerda para a direita horizontal */
-    float: left;
-    /* diz que na tela ele ira seguir de forma em uma linha so */
-    display: inline;
+        width: 150px;
+        /* aqui diz que ele ira da esquerda para a direita horizontal */
+        float: left;
+        /* diz que na tela ele ira seguir de forma em uma linha so */
+        display: inline;
 }
 
+/* menu para logar os dos links*/ 
+.menu a 
+{
+        width: 100%;
+        padding: 15px;
+        display: block;
+        text-decoration: none;
+        text-align: center;
+        background-color: aqua;
+}
+/* aqui eu defino a vidibilidade ea pocisao dentro da plataforma do de links */
+.menu ul ul
+{
+        position: absolute;
+        visibility: hidden;
+}
+
+/* usando para que quando usar essa funcao para quando passar o mouse no link as funcoes :hover ul apareca para afetar a entrada */
+.menu ul li:hover ul
+{
+        visibility: visible;
+}
+
+/*corrigindo as ul das funcoes daquele limks e servicos fica de forma de baixo para cima */ 
+.menu ul ul li
+{
+        float: none;
+        border-bottom:  solid#069;
+}
+
+/* mundando a cor do sub item das funcoes dos links*/
+.menu ul ul li a
+{
+        background-color: brown ;
+}
+
+/*funcao para modelar o butao de menu*/ 
+label[for="bt_menu"]
+{
+        padding: 5px;
+        background-color: #222;
+        color: #fff;
+        font-family: 'Arial';
+        text-align: center;
+        font-size: 30px;
+        cursor: pointer;
+        width: 50px ;
+        height: 50px;
+}
+
+/*aqui ele fara com que o icone do butao nao ira aparecer marcado de selecionado ou nao*/
+#bt_menu
+{
+        display: none;
+}
+/* aqui fara quando o botao do menu nao aparecer quandoa tela estiver em tela cheia*/
+label[for="bt_menu"]
+{
+        display: none;
+}
+
+
+/*usar essa funcao quando a pocisao da tela seja do pc ou para android minimizar todas as instrucoes aparecer de forma como piramide*/
+@media(max-width:800px)
+{
+    /* ja aqui dentro do pc estiver com a tela estiver com lela pequena ele ira bloquear nao aparecer o icone*/
+    label[for="bt_menu"]
+    {
+    display: block;
+    }
+
+    /* ajustando o menu da tela entre icone e funcoes */
+     .menu
+     {
+         margin-top:  5px; /* margen do top do icone*/
+         /*essa funcao e para quando selecionar o icone a imagem desaparecer -100 da tela */
+         margin-left: -100%; /* somi a tela*/
+         transition: all .4s; /* tempo de excussao para sumi a tela */
+     }
+
+        /*quando o botao menu estiver checado ultilizando mais uma vez seletor irmao ele ira chamar nossa nova menu de volta e ira comecar do zero*/
+        #bt_menu:checked ~ .menu
+        {
+            margin-left: 0 ;/*volta ara esquerda*/
+        }
+         
+        /*aqui eles vai mudar da horizontal para a vertical*/
+          .menu ul li
+          {
+                width: 100%;
+                float: none;
+          }
+            /* essa funcao e usada uando e preciso minimizar a tela e ficara de modo iniciar */
+        .menu ul ul 
+        {
+            /* essa funcao e usada uando e preciso minimizar a tela e ficara de modo iniciar e as funcoes fica centralizados  */
+            position: static;
+            overflow: hidden;
+            max-height: 0;
+            transition: all .4s;
+         }
+    /*aqui nas funcoes ele fara a funcoes dos daquele link apararecer quando passar com mouse em cima da instrucao daquela funcao*/
+    .menu ul li:hover ul
+    {
+        height: auto;
+        max-height: 200px;
+
+    }
+     
+
+}
 
 /* aqui agora eu vou dar o estilo do link da lista */
 .menu li a
@@ -51,7 +187,6 @@
     background-color: black;
 }
 
-/* aqui ele e usado para referencia aonde eu estou logado no link com cor preta*/
 .menu li.active
 {
     background-color: black;
@@ -60,14 +195,29 @@
 </style>
 </head>
 <body>
-    <nav class="menu">
-        <ul>
-           <li class="active"><a href="#">HOME</a></li> 
-           <li><a href="#">HTML</a></li> 
-           <li><a href="#">CSS</a></li> 
 
+    <!-- aqui ele e usado para referencia aonde eu estou logado no link com cor preta-->
+    <input type="checkbox" id="bt_menu">
+    <label for="bt_menu">&#9776;</label>
 
-        </ul>
+            <nav class="cabeçalho">
+               <ul>
+                   <a href="https://coronavirus.ceara.gov.br/">Informações corona virus</a> <br>
+                </ul>
+            </nav>
+
+            <nav class="menu" >
+                <ul>
+                    <li class="active"><a href="#">HOME</a></li> 
+                    <li><a href="#">ORNIZACOES</a>
+                        <ul>
+                            <li><a href="#">campinas-sp</a></li>
+                            <li><a href="#">Hortoladia-sp</a></li>
+                            <li><a href="#">Indaiatuba-sp</a></li>
+                            <li><a href="#">Valinhos-sp</a></li>
+                        </ul>                    </li> 
+                    <li><a href="#">CSS</a></li> 
+                </ul>
     </nav>
 </body>
 </html>
