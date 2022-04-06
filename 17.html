@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .cabeçalho{
+	margin:0;
+	height: 30px;
+	line-height: 200%;
+	width: 100%;
+	padding:0;
+	text-align: center;
+	background-color: goldenrod;
+}
+
+.cabeçalho a{
+    text-decoration: none;
+}
+
+	*{
+	margin:0;
+	padding:0;
+	color: azure;
+	font-family:'Arial';
+	}
+	
+.menu{
+	width:100%;
+	height:50px;
+	background-color: cadetblue;
+	}
+	
+.menu>ul{
+	list-style:none;	
+	position:relative;
+	margin-left:50px;
+	}
+.menu ul li{
+		width:150px;
+		float:left;
+	}
+
+.menu a{
+	padding:15px;
+	display:block;
+	text-decoration: none;
+	background-color: cadetblue;
+	text-align:center;
+	}
+.menu ul ul{
+	list-style:none;
+	position:absolute;
+	visibility:hidden;
+	
+	}
+.menu ul li:hover ul{
+	visibility:visible;
+	}
+	
+.menu a:hover{ /*cor do sensor do indicador do mouse  */
+	background-color: black;
+	}
+
+.menu ul ul li{
+	float:none;
+	border-bottom: solid 1px #ccc;
+	}
+.menu ul ul li a{
+	background-color:rgb(75, 194, 207);
+	}
+#bt_menu{
+	display: none;
+	}
+label[for='bt_menu']{
+	padding:5px;
+	background-color:#222;
+	color:#fff;
+	font-family:'Arial';
+	text-align:center;
+	font-size:30px;
+	cursor:pointer;
+	display:none;
+	width:50px;
+	height:50px;
+	}	
+label[for='bt_menu']:hover{
+	background-color:#f4f4f4;
+	color:#aaa;
+	}
+@media (max-width: 800px) {
+
+	.cabeçalho>ul{
+		margin-left: 0;
+	}
+
+	.cabeçalho{
+		margin-top: 5px;
+	}
+
+	.cabeçalho ul>li{
+		width: 100%;
+		float: 0;
+	}
+	.cabeçalho ul ul{
+		position: static;
+		overflow: hidden;
+		max-height: 0;
+		transition: all .4s;
+	}
+
+	.cabeçalho ul li:hover ul{
+	height:auto;
+	max-height:200px;
+	transition:all .4s;
+	}
+
+
+.menu{
+	margin-left:-100%;
+	transition:all .4s;
+	}
+label[for='bt_menu']{
+	display:block;
+	}
+.menu>ul{
+	margin-left:0;
+	}
+.menu{
+	margin-top:5px;
+	}
+.menu ul li{
+	width:100%;
+	float:none;
+	}
+.menu ul ul{
+	position:static;
+	overflow:hidden;
+	max-height:0;
+	transition:all .4s;
+	}
+.menu ul li:hover ul{
+	height:auto;
+	max-height:200px;
+	transition:all .4s;
+	}
+#bt_menu:checked ~ .menu{
+	margin-left:0;
+	}
+}
+
+.titulo{
+	
+	width: 100%;
+	margin-left:auto;
+	height: 140px;
+	background-color: rgb(170, 166, 166);
+}
+
+h1{
+	margin-left: 10%;
+	line-height: 225%;
+
+}
+
+h3{
+	margin-left: 10%;
+	line-height: 700%;
+}
+.button {
+  margin-inline: 20px;
+  width: 20%;
+  text-align: 50%;
+  background-color: #4CAF50; /* Green */
+  color: #222;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: left;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 40px 20px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  margin-left: 150px;
+}
+
+.button a{
+
+text-decoration: none;
+}
+.button1 {
+  
+  background-color: white; 
+  color: black; 
+  
+  border-left: 8px solid #4CAF50;
+  
+}
+
+.button1:hover {
+  background-color:  #4CAF50;
+  color: white;
+}
+
+.button2 {
+  background-color: white; 
+  color: black; 
+  border-left: 8px solid #4CAF50;
+}
+
+.button2:hover {
+  background-color:  #4CAF50;
+  color: white;
+}
+
+.button3 {
+  background-color: white; 
+  color: black; 
+  border-left: 8px solid #4CAF50;
+}
+
+.button3:hover {
+  background-color:  #4CAF50;
+  color: white;
+}
+
+.button4 {
+  background-color: white;
+  color: black;
+  border-left: 8px solid #4CAF50;
+}
+
+.button4:hover {background-color:  #4CAF50;}
+
+.button5 {
+  background-color: white;
+  color: black;
+  border-left: 8px solid #4CAF50;
+}
+
+.button5:hover {
+  background-color:  #4CAF50;
+  color: white;
+}
+
+.button6{
+  background-color: white; 
+  color: black; 
+  border-left: 8px solid #4CAF50;
+
+}
+.button7{
+  background-color: white; 
+  color: black; 
+  border-left: 8px solid #4CAF50;
+
+}
+.button8{
+  background-color: white; 
+  color: black;
+  border-left: 8px solid #4CAF50;
+ 
+}
+.button9{
+  background-color: white; 
+  color: black; 
+  border-left: 8px solid #4CAF50;
+
+}
+
+.button6:hover{
+	background-color:  #4CAF50;
+  color: white;
+}
+.button7:hover{
+	background-color:  #4CAF50;
+  color: white;
+}
+.button8:hover{
+	background-color:  #4CAF50;
+  color: white;
+
+}
+.button9:hover{
+	background-color:  #4CAF50;
+  color: white;
+}
+
+h4{
+	width: 30%;
+	padding: 16px 32px;
+	text-align: left;
+	margin: 40px 20px;
+	background-color: white; 
+    color: black;
+    border-left: 8px solid #4CAF50;
+	margin-left: 150px;
+}
+
+
+h4:hover{
+  background-color:  #4CAF50;
+  color: white;
+}
+</style>
+</head>
+<body>
+    <input type="checkbox" id="bt_menu">
+<label for="bt_menu">&#9776;</label>
+<nav class="cabeçalho">
+	<ul>
+		<a href="https://coronavirus.ceara.gov.br/">Informações corona virus</a> <br>
+	 </ul>
+ </nav>
+
+<nav class="menu">
+	<ul>
+    	<li><a href="#">governo</a></li>
+          <li><a href="#">Homorrede</a>
+        	<ul>
+            	<li><a href="https://www.hemocentro.unicamp.br/">hemocentro Unicampe </a>
+                <li><a href="https://www.boldrini.org.br/">hemocentro boldrini</a>
+            </ul>
+        </li>
+        <li><a href="#">mais sites</a>
+        	<ul class="submenu">
+            	<li><a href="https://detran.sp.gov.br/">Detran</a>
+                <li><a href="https://www.todamateria.com.br/">cultura</a>
+            </ul>
+        </li>
+      
+        <li><a href="#">Contato</a></li>
+    </ul>
+ </nav>
+
+
+<nav class="titulo">
+    
+ <h1 style="font-size:60px; color: #222; font-family: Arial, Helvetica, sans-serif;" >HOMECE</h1>
+ <h3 style="font-size:20px; color: #222; font-family: Arial, Helvetica, sans-serif;" >DOACAO DE SANGUE</h3>
+
+	<button class="button button1"><a style="font-size: 15px; color: #222;" href="https://www.hemocentro.unicamp.br/">CRITERIOS PARA DOAR</a></button>
+	<button class="button button2"><a  style="font-size: 15px; color: #222;" href="">PASSO PARA DOACAO</a></button>
+	<button class="button button3"><a  style="font-size: 15px; color: #222;" href="">TERMO PARA MENORES</a></button>
+	<button class="button button4"><a  style="font-size: 15px; color: #222;" href="">LOCAIS E HORARIOS PARA DOAR</a></button>
+	<button class="button button5"><a style="font-size: 15px; color: #222;" href="">CUIDADOS POS DOACAO DE SANGUE</a></button>
+	<button class="button button6"><a  style="font-size: 15px; color: #222;" href="">CALENDARIO DE COLETAS EXTERNAS</a></button>
+	<button class="button button7"><a  style="font-size: 15px; color: #222;" href="">POLITICA DE CAPTACAO DE DOADORES</a></button>
+	<button class="button button8"><a  style="font-size: 15px; color: #222;" href="">PROGRAMA DE FIDELIDADE DO HEMOCE</a></button>
+	<button class="button button9"><a  style="font-size: 15px; color: #222;" href="">DOADOR DE SANGUE RARO</a></button>
+
+	<h4 style="font-size:30px; color: #222; font-family: Arial, Helvetica, sans-serif;" >SUA DOACAO SALVA VIDAS</h4>
+ </nav> 
+
+
+</body>
+</html>
